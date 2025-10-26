@@ -1,0 +1,6 @@
+alias v='nvim'
+alias c='clear'
+alias py='python3'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fast='fastfetch'
