@@ -1,3 +1,4 @@
+(cat ~/.cache/wal/sequences &)
 
 # The following lines were added by compinstall
 
@@ -24,7 +25,7 @@ if [ -f ~/.zsh_aliases ] ; then
     source ~/.zsh_aliases
 fi
 
-PS1='%n@%m %~$ '
+PS1='%n@%m:%~$ '
 
 eval $(ssh-agent -s) > /dev/null 2>&1
 ssh-add ~/.ssh/github > /dev/null 2>&1
@@ -35,4 +36,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-(cat ~/.cache/wal/sequences &)

@@ -1,1 +1,2 @@
-brave/.config/BraveSoftware
+brave/.config/BraveSoftware*
+nvim/.vim/undodir*
