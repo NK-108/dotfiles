@@ -2,6 +2,6 @@
 	path = qutebrowser/.config/qutebrowser/pywalQute
 	url = https://github.com/makman12/pywalQute.git
 
-[submodule "zsh/.oh_my_zsh"]
-    path = zsh/.oh_my_zsh
+[submodule "zsh/.oh-my-zsh"]
+    path = zsh/.oh-my-zsh
     url = https://github.com/ohmyzsh/ohmyzsh.git
