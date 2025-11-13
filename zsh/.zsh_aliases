@@ -1,8 +1,0 @@
-alias v='nvim'
-alias c='clear'
-alias py='python3'
-alias ls='lsd'
-alias grep='grep --color=auto'
-alias fast='fastfetch'
-alias gccw='gcc -Wall -Wextra -Wpedantic'
-alias g++w='g++ -Wall -Wextra -Wpedantic'

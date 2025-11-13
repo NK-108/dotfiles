@@ -498,3 +498,277 @@ sudo v /etc/shells
 sudo nvim /etc/shells
 chsh -s $(which zsh)
 zsh
+ls
+cd workshop/PatriosLLC/
+ls
+cd linux_4_tegra/
+ls
+cd Linux_for_Tegra_R32.7.3
+ls
+sudo ./source_sync.sh -t tegra_l4t_r32.7.3
+sudo ./source_sync.sh -t tegra-l4t-r32.7.3
+sudo ./apply_binaries.sh 
+clear
+sudo ./flash jetson-nano-emmc mmcblk0p1
+sudo ./flash.sh jetson-nano-emmc mmcblk0p1
+sudo tools/l4t_create_default_user.sh -u nvidia -p 9106430780 -n AMRK-156 --accept-license
+cat ../README.md 
+ping 172.20.2.156
+ssh 172.20.2.156
+ssh 172.20.2.156 | grep "ssh-keygen" | 
+ssh 172.20.2.156 | grep "ssh-keygen"
+ssh-keygen -f '/home/super/.ssh/known_hosts' -R '172.20.2.156'
+clear
+ssh nvidia172.20.2.156
+ssh nvidia@172.20.2.156
+cd ../../amarok_
+cd ../../amarok_nano/
+clear
+ls
+cd patrios_app
+git status
+v Makefile 
+ls
+ls h31proxy
+git log
+git reset --hard HEAD~1
+clear
+ls
+ls scripts/
+clear
+cd ..
+scp -r patrios_app nvidia@172.20.2.156:~
+clear
+ping 192.168.137.2
+ls -a 
+git submodule status
+clear
+ls
+v README.md
+ssh h31@172.20.2.156
+ping 172.20.2.156
+cd ../linux_4_tegra/Linux_for_Tegra
+sudo ./flash.sh -r -k APP -G working_v4.img jetson-nano-emmc mmcblk0p1
+clear
+ls
+cp bootloader/system.img* .
+ls
+rm bootloader/system.img*
+sudo rm bootloader/system.img*
+ls bootloader/
+ls
+cp working_v4.img bootloader/system.img
+cp working_v4.img.raw bootloader/system.img.raw
+ls
+clear
+ls bootloader/
+clear
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd ..
+git status
+cat .git
+cat .gitignore 
+v .gitignore 
+git status 
+clear
+cd ../amarok_nano/
+clear
+ls
+git status
+git pull
+git add .
+git commit -m "gstd url fix; nvargus disable; h31proxy config fix"
+git pull
+clear
+git status
+git push
+clear
+ls
+git branch
+cd 
+cd .dot
+cd .dotfiles/
+ls
+clear
+git status
+git branch
+git pull
+clear
+ls
+ls ~/.config/
+rm -r ~/.config/coc ~/.config/nvim ~/.config/btop
+ls ~/.config/
+stow nvim btop coc 
+sudo apt install stow
+stow nvim btop coc
+ls ~/.config/
+ls
+ls -la
+git submodule update
+stow nvim
+find -name .viminfo
+ls nvim
+ls -la nvim
+cat nvim/.viminfo 
+rm nvim/.viminfo 
+stow nvim
+clear
+stow coc
+stow btop
+stow -h
+stow -v coc
+stow -S coc
+clear
+ls ~/.config/
+ls -la
+ls -l coc
+ls -la coc
+file coc
+cd coc
+ls
+cd ..
+clear
+ls
+ls -a
+ls -la
+ls
+ls ~/.config
+rm ~/.config/coc -rf
+stow coc
+clear
+ls ~/.config/
+clear
+nvim
+v nvim/.config/nvim/lua/nk108/lazy/
+nvim
+ls .local
+ls /home/super
+ls /home/super/.local/
+ls /home/super/.local/opt/
+ls /home/super/.local/bin
+ls /home/super/.local/share
+ls /home/super/.local/state
+ls /home/super/.local/state/nvim/
+nvim
+clear
+git log
+clear
+cd
+c
+cd .dotfiles
+ls
+cd ..
+mv .dotfiles/zsh/.zsh_aliases .
+ls -la .dotfiles/bash
+ls
+ls -la
+mv .zsh_aliases .aliases
+ls -la
+ls .bash_aliases 
+rm .bash*
+ls -la
+cat .aliases 
+cd .dotfiles/
+v bash/.bashrc
+v zsh/.zshrc
+stow bash
+clear
+source ~/.bashrc
+cat ~/.bashrc
+ls -la
+cd ..
+ls -la
+v ~/.bashrc
+source ~/.bashrc
+clear
+ls
+ls .aliases
+cat .aliase
+cat .aliases 
+v
+v .aliases 
+source ~/.bashrc
+clear
+ls
+clear
+ls
+v .bashrc
+source ~/.bashrc
+v .bashrc
+source ~/.bashrc
+v .bashrc
+source ~/.bashrc
+clear
+ssh -T git@github-n.com
+ssh -T git@github.com
+ssh -T git@github-patrios.com
+clear
+v .bashrc
+l
+clear
+source ~/.bashrc
+clear
+ls
+ls -la
+cd .dotfiles/
+git status
+diff bash/.bashrc
+git diff bash/.bashrc
+clear
+git status
+mv ~/.aliases .
+ls .aliases 
+clear
+mkdir aliases
+ls
+mv .aliases aliases
+ls
+ls aliases/ -a
+clear
+stow aliases/
+clear
+git status
+git add aliases/
+git commit -m "made alias file a universal file and separated stow dir; updated bashrc"
+git push
+clear
+ls
+cd ..
+ls -la
+rm .zsh*
+ls
+ls -la
+cat .zcompdump 
+cat .zcompdump | head -n 20
+rm .zcompdump 
+clear
+ls -la
+clear
+g++w
+clear
+cd workshop/PatriosLLC/linux_4_tegra/
+cd Linux_for_Tegra
+ls
+cd ..
+ls
+cd Linux_for_Tegra_R32.7.3/
+ls
+cd ..
+cd Linux_for_Tegra
+ls
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+c
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd workshop/PatriosLLC/linux_4_tegra/
+cd Linux_for_Tegra
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd ..
+cd workshop/PatriosLLC/linux_4_tegra/Linux_for_Tegra
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd workshop/PatriosLLC/linux_4_tegra/Linux_for_Tegra
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd workshop/PatriosLLC/linux_4_tegra/
+cd Linux_for_Tegra
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1
+cd workshop/PatriosLLC/linux_4_tegra/Linux_for_Tegra
+sudo ./flash.sh -r jetson-nano-emmc mmcblk0p1

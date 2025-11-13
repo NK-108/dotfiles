@@ -21,8 +21,8 @@ HISTSIZE=100
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 
-if [ -f ~/.zsh_aliases ] ; then
-    source ~/.zsh_aliases
+if [ -f ~/.aliases ] ; then
+    source ~/.aliases
 fi
 
 PS1='%n@%m:%~$ '
