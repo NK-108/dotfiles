@@ -24,3 +24,6 @@ settings:
       <Shift-Return>: <Return>
   colors.webpage.darkmode.enabled:
     global: true
+  content.javascript.clipboard:
+    https://github.com: access-paste
+    https://www.learncpp.com: access-paste
