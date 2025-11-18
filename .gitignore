@@ -1,2 +1,6 @@
 brave/.config/BraveSoftware*
 nvim/.vim/undodir*
+
+# Shell History
+bash/.bash_history*
+zsh/.histfile
