@@ -1,5 +1,9 @@
+# Brave
 brave/.config/BraveSoftware*
+
+# Neovim
 nvim/.vim/undodir*
+nvim/.config/nvim/lazy-lock.json
 
 # Shell History
 bash/.bash_history*
