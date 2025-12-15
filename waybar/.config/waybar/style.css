@@ -33,16 +33,18 @@ window#waybar {
 }
 
 #backlight {
-    color: @color5;
+    color: @color4;
     border-radius: 10px 0px 0px 10px;
 }
 
 #workspaces button {
     color: @color8;
+    background: @background
 }
 
 #workspaces button.active {
     color: @color9;
+    background: @background
 }
 
 #workspaces button.hover {
@@ -59,7 +61,7 @@ window#waybar {
 }
 
 #cpu {
-    color: @color3;
+    color: #d65d0e;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }
@@ -90,7 +92,7 @@ window#waybar {
 }
 
 #battery {
-    color: @color2;
+    color: @color3;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }

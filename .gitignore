@@ -1,5 +1,6 @@
 brave/.config/BraveSoftware*
 nvim/.vim/undodir*
+qutebrowser/.config/qutebrowser/pywalQute*
 
 # Shell History
 bash/.bash_history*
