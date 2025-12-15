@@ -1,4 +1,7 @@
-@import "/home/moss/.cache/wal/colors-waybar.css";
+/* Enable PyWal16 Colors
+@import "/home/moss/.cache/wal/colors-waybar.css"; 
+*/
+@import "/home/moss/.config/waybar/gruvbox.css";
 
 * {
     border: none;
@@ -11,46 +14,16 @@
 
 window#waybar {
     background: @background;
-    color: @color7;
-}
-
-#workspaces button {
-    padding: 5px;
-    color: @color7;
-    margin-right: 5px;
-}
-
-#workspaces button.active {
-    color: @color1;
-}
-
-#workspaces button.focused {
-    color: @color1;
-    background: #eba0ac;
-    border-radius: 10px;
-}
-
-#workspaces button.urgent {
-    color: @background;
-    background: #a6e3a1;
-    border-radius: 10px;
-}
-
-#workspaces button:hover {
-    background: #cdd6f4;
-    color: @background; 
-    border-radius: 10px;
+    color: @color8;
 }
 
 #window,
 #clock,
 #battery,
-#pulseaudio,
 #network,
 #cpu,
 #memory,
 #workspaces,
-#tray,
 #backlight {
     background: @background;
     padding: 0px 10px;
@@ -60,12 +33,21 @@ window#waybar {
 }
 
 #backlight {
+    color: @color5;
     border-radius: 10px 0px 0px 10px;
 }
 
-#tray {
-    border-radius: 10px;
-    margin-right: 10px;
+#workspaces button {
+    color: @color8;
+}
+
+#workspaces button.active {
+    color: @color9;
+}
+
+#workspaces button.hover {
+    color: @color8;
+    background: @background
 }
 
 #workspaces {
@@ -77,49 +59,38 @@ window#waybar {
 }
 
 #cpu {
+    color: @color3;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }
 
 #memory {
+    color: #d65d0e;
     border-radius: 10px 0px 0px 10px;
 }
 
 #window {
+    color: @color2;
     border-radius: 10px;
     margin-left: 60px;
     margin-right: 60px;
 }
 
 #clock {
-    color: @color7;
+    color: @color6;
     border-radius: 10px 10px 10px 10px;
     margin-left: 5px;
     border-right: 0px;
 }
 
 #network {
-    color:  @color7;
+    color:  @color4;
     border-radius: 10px 0px 0px 10px;
 
 }
 
-#pulseaudio {
-    color: @color7;
-    border-left: 0px;
-    border-right: 0px;
-}
-
-#pulseaudio.microphone {
-    color: @color7;
-    border-radius: 0px 10px 10px 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-right: 5px;
-}
-
 #battery {
-    color: @color7;
+    color: @color2;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }

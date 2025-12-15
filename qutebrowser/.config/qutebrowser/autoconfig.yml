@@ -11,6 +11,7 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
+        sq: cmd-set-text -s :quickmark-add {url} "
   bindings.key_mappings:
     global:
       <Ctrl-6>: <Ctrl-^>

@@ -1,4 +1,5 @@
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
+# export LS_COLORS="$(vivid generate gruvbox-dark)"
 
 # The following lines were added by compinstall
 

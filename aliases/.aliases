@@ -1,12 +1,20 @@
 alias v='nvim'
+alias bat='batcat'
 alias c='clear'
+alias claer='clear'
 alias py='python3'
+
 alias ls='lsd'
 alias la='lsd -A'
-alias ll='lsd -alF'
+alias ll='ksd===lsd -alF'
+alias l='lsd -alF'
+alias tree='lsd --tree --depth=3'
 alias grep='grep --color=auto'
+
 alias fast='fastfetch'
-alias gccw='gcc -Wall -Wextra -Wpedantic'
-alias g++w='g++ -Wall -Wextra -Wpedantic'
 alias mn='tldr --pager'
 alias cman='cppman'
+
+alias vg='valgrind'
+alias gccw='gcc -Wall -Wextra -Wpedantic'
+alias g++w='g++ -Wall -Wextra -Wpedantic'
