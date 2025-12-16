@@ -49,6 +49,11 @@ return {
           mode = "n",
           desc = "Quit Oil Buffer",
         },
+        ["<Esc>"] = {
+          "<Cmd>quit<CR>",
+          mode = "n",
+          desc = "Quit Oil Buffer",
+        },
       },
       float = {
         border = "single",

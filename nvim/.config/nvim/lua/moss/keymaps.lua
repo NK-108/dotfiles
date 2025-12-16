@@ -12,8 +12,8 @@ map({ "n", "v" }, "<leader>fd", '"+d', { desc = "Delete selection into system re
 map({ "n", "v" }, "<leader>fp", '"+p', { desc = "Paste selection from system register after" })
 map({ "n", "v" }, "<leader>fP", '"+P', { desc = "Paste selection from system register before" })
 
-map("n", "<M-l>", '<Cmd>bprev<CR>', { desc = "Open previous buffer" })
-map("n", "<M-h>", '<Cmd>bnext<CR>', { desc = "Open next buffer" })
+map("n", "<M-h>", '<Cmd>bprev<CR>', { desc = "Open previous buffer" })
+map("n", "<M-l>", '<Cmd>bnext<CR>', { desc = "Open next buffer" })
 map("n", "<M-j>", '<Cmd>tabprev<CR>', { desc = "Open next tab" })
 map("n", "<M-k>", '<Cmd>tabnext<CR>', { desc = "Open previous tab" })
 

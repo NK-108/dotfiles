@@ -9,17 +9,24 @@ end
 
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    require('lualine').setup({
+    require("lualine").setup({
       options = {
-        theme = 'gruvbox',
+        theme = "gruvbox",
       },
       sections = {
-        lualine_c = {'buffers'},
-        lualine_x = {'filetype', 'encoding'},
-        lualine_y = {'lsp_status'},
-        lualine_z = {lualine_pos},
+        lualine_c = {
+          {
+            "buffers",
+            buffers_color = {
+              active = { fg = "#ebdbb2" }, -- Color for active buffer.
+            },
+          },
+        },
+        lualine_x = { "filetype", "encoding" },
+        lualine_y = { "lsp_status" },
+        lualine_z = { lualine_pos },
       },
     })
   end,
