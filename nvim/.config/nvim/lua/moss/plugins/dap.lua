@@ -2,14 +2,27 @@ return {
   "mfussenegger/nvim-dap",
   dependencies = {
     {
-      "igorlfs/nvim-dap-view",
-      ---@module 'dap-view'
-      ---@type dapview.Config
-      opts = {},
+      {
+        "rcarriga/nvim-dap-ui",
+        dependencies = { "nvim-neotest/nvim-nio" },
+        opts = {},
+      },
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        opts = {
+          commented = true,
+        },
+      },
+      -- {
+      --   "igorlfs/nvim-dap-view",
+      --   ---@module 'dap-view'
+      --   ---@type dapview.Config
+      --   opts = {},
+      -- },
     },
   },
   config = function()
-    local dap = require("dap")
+    local dap, dapui = require("dap"), require("dapui")
 
     dap.adapters.gdb = {
       type = "executable",
@@ -22,8 +35,12 @@ return {
         name = "Launch Current File",
         type = "gdb",
         request = "launch",
-        program = vim.fn.expand("%:p:r"),
-        args = {},
+        program = function()
+          return vim.fn.expand("%:p:r")
+        end,
+        args = function()
+          return vim.fn.input("Arguments: ")
+        end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
       },
@@ -34,7 +51,9 @@ return {
         program = function()
           return vim.fn.input("Path to exectuable: ", vim.fn.getcwd() .. "/", "file")
         end,
-        args = {},
+        args = function()
+          return vim.fn.input("Arguments: ")
+        end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
       },
@@ -54,6 +73,19 @@ return {
       },
     }
     dap.configurations.cpp = dap.configurations.c
+
+    dap.listeners.before.attach.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.launch.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated.dapui_config = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited.dapui_config = function()
+      dapui.close()
+    end
   end,
   keys = {
     {
@@ -106,25 +138,50 @@ return {
       desc = "[D]ebugger [C]ontinue",
     },
     {
+      "<leader>du",
+      function()
+        require("dapui").toggle()
+      end,
+      desc = "[D]ebugger [U]i",
+    },
+    {
+      "<leader>df",
+      function()
+        require("dapui").float_element()
+      end,
+      mode = { "n", "v" },
+      desc = "[D]ebugger [F]loat",
+    },
+    {
+      "<leader>de",
+      function()
+        require("dapui").eval()
+      end,
+      mode = { "n", "v" },
+      desc = "[D]ebugger [E]val",
+    },
+    {
       "<leader>dq",
       function()
-        require("dap-view").close()
+        require("dapui").close()
+        -- require("dap-view").close()
         require("dap").terminate()
       end,
       desc = "[D]ebugger [Q]uit",
     },
-    {
-      "<Leader>dw",
-      function()
-        require("dap-view").add_expr()
-      end,
-      desc = "[D]ebugger [H]over",
-      mode = { "n", "v" },
-    },
-    {
-      "<leader>dv",
-      "<Cmd>DapViewToggle<CR>",
-      desc = "[D]ebugger [Q]uit",
-    },
+    -- For Use with Dap-View Plugin
+    -- {
+    --   "<Leader>dw",
+    --   function()
+    --     require("dap-view").add_expr()
+    --   end,
+    --   desc = "[D]ebugger [W]atch",
+    --   mode = { "n", "v" },
+    -- },
+    -- {
+    --   "<leader>dv",
+    --   "<Cmd>DapViewToggle<CR>",
+    --   desc = "[D]ebugger [Q]uit",
+    -- },
   },
 }

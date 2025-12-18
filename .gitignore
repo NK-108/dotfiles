@@ -1,6 +1,7 @@
 brave/.config/BraveSoftware*
 nvim/.vim/undodir*
 qutebrowser/.config/qutebrowser/pywalQute*
+nvim/.config/nvim/lazy-lock.json
 
 # Shell History
 bash/.bash_history*
