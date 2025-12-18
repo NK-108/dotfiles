@@ -175,7 +175,7 @@ return {
           function()
             vim.diagnostic.enable(not vim.diagnostic.is_enabled({ bufnr = event.buf}))
           end,
-          "[T]oggle [D]irtual Text"
+          "[T]oggle [D]agnostics"
         )
 
         -- Disable LSP Semantic Token Highlighting

@@ -10,7 +10,7 @@ return {
       {
         "theHamsta/nvim-dap-virtual-text",
         opts = {
-          commented = true,
+          commented = false,
         },
       },
       -- {
