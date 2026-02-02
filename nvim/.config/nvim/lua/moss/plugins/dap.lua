@@ -39,7 +39,9 @@ return {
           return vim.fn.expand("%:p:r")
         end,
         args = function()
-          return vim.fn.input("Arguments: ")
+          vim.ui.input("Arguments: ", function(input)
+            return input
+          end)
         end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
@@ -49,10 +51,12 @@ return {
         type = "gdb",
         request = "launch",
         program = function()
-          return vim.fn.input("Path to exectuable: ", vim.fn.getcwd() .. "/", "file")
+          return vim.ui.input("Path to exectuable: ", vim.fn.getcwd() .. "/", "file")
         end,
         args = function()
-          return vim.fn.input("Arguments: ")
+          vim.ui.input("Arguments: ", function(input)
+            return input
+          end)
         end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
@@ -62,10 +66,10 @@ return {
         type = "gdb",
         request = "attach",
         program = function()
-          return vim.fn.input("Path to exectuable: ", vim.fn.getcwd() .. "/", "file")
+          return vim.ui.input("Path to exectuable: ", vim.fn.getcwd() .. "/", "file")
         end,
         pid = function()
-          local name = vim.fn.input("Executable name (filter): ")
+          local name = vim.ui.input("Executable name (filter): ")
           return require("dap.utils").pick_process({ filter = name })
         end,
         args = {},

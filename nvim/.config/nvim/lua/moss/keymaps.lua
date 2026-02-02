@@ -1,11 +1,13 @@
 local map = vim.keymap.set
 
 -- General Mappings
-map("n", "<leader>fw", "<Cmd>update<CR>", { desc = "Write current file if modified" })
-map("n", "<leader>fs", "<Cmd>source %<CR>", { desc = "Source current file" })
-map("n", "<leader>fq", "<Cmd>quit<CR>", { desc = "Quit current windows" })
-map("n", "<leader>fQ", "<Cmd>wqa!<CR>", { desc = "Write and quit all open windows" })
-map("n", "<leader>fc", '<Cmd>bdelete<CR>', { desc = "Delete current buffer" })
+-- map("n", "<leader>fw", "<Cmd>update<CR>", { desc = "Write current file if modified" })
+-- map("n", "<leader>fs", "<Cmd>source %<CR>", { desc = "Source current file" })
+-- map("n", "<leader>fq", "<Cmd>quit<CR>", { desc = "Quit current windows" })
+-- map("n", "<leader>fQ", "<Cmd>wqa!<CR>", { desc = "Write and quit all open windows" })
+-- map("n", "<leader>fc", '<Cmd>bdelete<CR>', { desc = "Delete current buffer" })
+-- map("n", "<leader>fm", '<Cmd>make<CR>', { desc = "Run compilation command" })
+-- map("n", "<leader>fM", '<Cmd>make debug<CR>', { desc = "Run compilation command" })
 
 map({ "n", "v" }, "<leader>fy", '"+y', { desc = "Yank selection into system register" })
 map({ "n", "v" }, "<leader>fd", '"+d', { desc = "Delete selection into system register" })

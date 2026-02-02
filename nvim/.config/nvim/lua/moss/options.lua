@@ -56,10 +56,10 @@ vim.opt.listchars = { tab = ">>", trail = ".", nbsp = "_" }
 -- Configures the height of the command window below statusline
 -- vim.opt.cmdheight = 0
 
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-vim.api.nvim_set_hl(0, 'FidgetTitle', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'FidgetTask', { link = "NormalFloat"  })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+-- vim.api.nvim_set_hl(0, 'FidgetTitle', { link = "NormalFloat" })
+-- vim.api.nvim_set_hl(0, 'FidgetTask', { link = "NormalFloat"  })
 
 -- Override open_floating_preview function so all calls to it have a border
 do
@@ -74,5 +74,13 @@ do
 
     return orig(contents, syntax, opts, ...)
   end
+end
+
+-- Helper Input Function to avoid having to specify 'on_confirm' for defualt cases
+local function input(opts, on_confirm)
+  return Snacks.input(opts, on_confirm or function(value)
+    if value == nil then return end
+    vim.notify("Input: " .. value)
+  end)
 end
 

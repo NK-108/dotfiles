@@ -27,9 +27,19 @@ return {
       desc = "Find Files in Current Directory",
     },
     {
+      "<leader>sF",
+      function() require("fzf-lua").files({ cwd = "~" }) end,
+      desc = "Find Files in Home Directory",
+    },
+    {
       "<leader>sn",
       function() require("fzf-lua").files({ cwd = vim.fn.stdpath("config") .. "/lua/moss/" }) end,
-      desc = "Find Files in Project Root Directory",
+      desc = "Find Files in Neovim Directory",
+    },
+    {
+      "<leader>sc",
+      function() require("fzf-lua").files({ cwd = "~/.dotfiles"}) end,
+      desc = "Find Files in Config Directory",
     },
     {
       "<leader>sg",

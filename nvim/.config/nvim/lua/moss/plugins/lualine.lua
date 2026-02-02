@@ -7,26 +7,45 @@ local lualine_pos = function()
   return string.format("%" .. POS_WIDTH .. "s", pos)
 end
 
+local colors = require("noir.colors")
+local custom_bg = "#8080A0"
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("lualine").setup({
       options = {
-        theme = "gruvbox",
+        theme = "tomorrow_night",
+          -- normal = { c = { fg = colors.fg, bg = colors.bg } },
+          -- inactive = { c = { fg = colors.fg, bg = colors.bg } },
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_c = {
-          {
-            "buffers",
-            buffers_color = {
-              active = { fg = "#ebdbb2" }, -- Color for active buffer.
-            },
-          },
-        },
-        lualine_x = { "filetype", "encoding" },
-        lualine_y = { "lsp_status" },
-        lualine_z = { lualine_pos },
+        lualine_a = { { 
+          "mode",
+          color = { bg = custom_bg },
+        } },
+        lualine_b = { 'branch' },
+        lualine_c = { {
+          "buffers",
+          buffers_color = { active = 'lualine_b_normal', inactive = 'lualine_c_inactive' },
+        } },
+        lualine_x = {},
+        lualine_y = { 'diagnostics', 'lsp_status' },
+        lualine_z = { {
+          lualine_pos,
+          color = { bg = custom_bg },
+        } },
+      },
+      inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_y = {},
+        lualine_z = {},
+        lualine_c = {},
+        lualine_x = {},
       },
     })
   end,
