@@ -13,7 +13,12 @@ return {
       preview = {
         border = "single",
       }
-    }
+    },
+    keymap = {
+      fzf = {
+        ["ctrl-q"] = "select-all+accept",
+      },
+    },
   },
   keys = {
     {

@@ -97,3 +97,4 @@ if [ -d "$HOME/.nvm" ] ; then
 fi
 
 if [ -f ~/.cache/wal/sequences ] ; then (cat ~/.cache/wal/sequences &) ; fi
+export PATH="$PATH:$HOME/.local/bin"

@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.cmd.highlight('NormalFloat guibg=#202020')
     vim.cmd.highlight('Comment guifg=#505050')
   end,
-  group = vim.api.nvim_create_augroup('Colorschemes', { clear = true }),
+  group = vim.api.nvim_create_augroup('color_noir', { clear = true }),
   pattern = "noir*",
 })
 
@@ -23,9 +23,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.cmd.highlight('Normal guibg=#282828')
     vim.cmd.highlight('NormalFloat guibg=#282828')
   end,
-  group = vim.api.nvim_create_augroup('Colorschemes', { clear = true }),
+  group = vim.api.nvim_create_augroup('color_gruber_darker', { clear = true }),
   pattern = "gruber-darker*",
 })
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruber-darker]])
+vim.cmd.colorscheme("noir")
