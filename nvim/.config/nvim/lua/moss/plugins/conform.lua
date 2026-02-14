@@ -3,6 +3,9 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
+      sh = { "beautysh" },
+      -- c = { "clang-format" },
+      -- cpp = { "clang-format" },
     },
   },
   keys = {

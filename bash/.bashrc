@@ -88,7 +88,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | batcat -p -lman'"
+
+set -o vi
 
 if [ -d "$HOME/.nvm" ] ; then
     export NVM_DIR="$HOME/.nvm"
@@ -98,3 +100,6 @@ fi
 
 if [ -f ~/.cache/wal/sequences ] ; then (cat ~/.cache/wal/sequences &) ; fi
 export PATH="$PATH:$HOME/.local/bin"
+. "$HOME/.cargo/env"
+
+source /home/super/perl5/perlbrew/etc/bashrc

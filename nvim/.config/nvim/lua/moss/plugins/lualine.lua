@@ -12,7 +12,8 @@ local custom_bg = "#8080A0"
 
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = { "nvim-mini/mini.icons" },
   config = function()
     require("lualine").setup({
       options = {
@@ -27,7 +28,7 @@ return {
           "mode",
           color = { bg = custom_bg },
         } },
-        lualine_b = { 'branch' },
+        lualine_b = {},
         lualine_c = { {
           "buffers",
           buffers_color = { active = 'lualine_b_normal', inactive = 'lualine_c_inactive' },
